@@ -1,17 +1,11 @@
 // this sets the background color of the master UIView (when there are no windows/tab groups on it)
 Titanium.UI.setBackgroundColor('#000');
 
-// create tab group
 var tabGroup = Titanium.UI.createTabGroup({
 	
 });
 
-
-//
-// create base UI tab and root window
-//
 var win1 = Titanium.UI.createWindow({  
- 
     color:'#fff',
     barColor: '#1D3B4A',
     titleControl: Ti.UI.createLabel({ 
@@ -22,19 +16,22 @@ var win1 = Titanium.UI.createWindow({
   		}) 
 });
 var tab1 = Titanium.UI.createTab({  
-   // icon:'KS_nav_views.png',
     icon:'images/857-rocket-selected.png',
-    //title:'Values',
-    
     window:win1
 });
 
+var gameUrl;
 
+if(Ti.Platform.osname=='android'){
+		gameUrl='http://staging.2and2.com.au/pup/onboarding/build_030914/index.html';
+}else{
+        gameUrl='game/index.html';
+};
+
+// Local install of game not working on old androids, so load from web (no idea why - look into it one day)
 var webView = Ti.UI.createWebView({
-        //top:'-50dp',
-        //height:'94%',
-        url:'game/index.html'
-    });
+		url: gameUrl
+ });
     
 
 win1.add(webView);
@@ -70,15 +67,7 @@ var webView2 = Ti.UI.createWebView({
 
 win2.add(webView2);
 
-
-
-
-//
-//  add tabs
-//
 tabGroup.addTab(tab1);  
 tabGroup.addTab(tab2);  
 
-
-// open tab group
 tabGroup.open();
