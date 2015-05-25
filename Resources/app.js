@@ -16,14 +16,15 @@ var win1 = Titanium.UI.createWindow({
   		}) 
 });
 var tab1 = Titanium.UI.createTab({  
-    icon:'images/857-rocket-selected.png',
+    icon:'_PUShared/PUIcons/857-rocket-selected.png',
     window:win1
 });
 
 var gameUrl;
 
 if(Ti.Platform.osname=='android'){
-		gameUrl='http://staging.2and2.com.au/pup/onboarding/build_030914/index.html';
+		//gameUrl='http://staging.2and2.com.au/pup/onboarding/build_030914/index.html';
+		gameUrl='game/index.html';
 }else{
         gameUrl='game/index.html';
 };
@@ -54,7 +55,7 @@ var tab2 = Titanium.UI.createTab({
     //icon:'KS_nav_ui.png',
    // title:'Jobs',
     color: 'white',
-    icon:'images/701-location-selected.png',
+    icon:'_PUShared/PUIcons/701-location-selected.png',
     window:win2
 });
 

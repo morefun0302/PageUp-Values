@@ -1,9 +1,8 @@
 {
-	"target": "device",
-	"deployType": "test",
+	"target": "simulator",
+	"deployType": "development",
 	"iosSdkVersion": "8.2",
 	"deviceFamily": "universal",
-	"developerName": "Simon Cariss (38W8YSX3AT)",
 	"iosSdkPath": "/Users/cariss/Library/Application Support/Titanium/mobilesdk/osx/3.5.1.GA/iphone",
 	"tiCoreHash": "47658db9e85e6b4af144b3d6070d6de0",
 	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
@@ -15,11 +14,11 @@
 	"publisher": "PageUp",
 	"url": "http://www.paguppeople.com",
 	"version": "1.0",
-	"description": "undefined",
+	"description": "Values game for recruitment",
 	"copyright": "2015 by PageUp",
 	"guid": "36c05d86-1def-4983-ab7b-c77417018ae9",
-	"skipJSMinification": false,
+	"skipJSMinification": true,
 	"forceCopy": false,
 	"forceCopyAll": false,
-	"encryptJS": true
+	"encryptJS": false
 }
