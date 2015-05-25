@@ -138,6 +138,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>/fonts/AppIcons.ttf</string>
 		<string>/game/assets/fonts/vag_rounded_bold-webfont.ttf</string>
 		<string>/game/assets/fonts/varelaround-regular-webfont.ttf</string>
 	</array>

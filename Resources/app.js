@@ -1,23 +1,34 @@
 // this sets the background color of the master UIView (when there are no windows/tab groups on it)
-Titanium.UI.setBackgroundColor('#000');
+//Titanium.UI.setBackgroundColor('#000');
 
-var tabGroup = Titanium.UI.createTabGroup({
-	
-});
-
-var win1 = Titanium.UI.createWindow({  
+var winGame = Titanium.UI.createWindow({  
     color:'#fff',
+    backgroundColor: 'white',
     barColor: '#1D3B4A',
     titleControl: Ti.UI.createLabel({ 
     		text:'PageUp Values',
    			color: 'white', 
     		width: Ti.UI.SIZE ,
     		font:{fontSize:'18dp'},  
-  		}) 
+  		}) ,
+  		 navBarHidden: false,
+		navTintColor:'#fff',
 });
+
+if(Ti.Platform.osname=="iphone"){
+    	var iconRocket = '_PUShared/PUIcons/857-rocket-selected.png';
+    	var iconWeb = '_PUShared/PUIcons/701-location-selected.png';
+    }else{
+    	var iconRocket = createIconFile('rocket', iSize);
+    	var iconWeb = createIconFile('compass', iSize);
+    }
+    
+var tabGroup = Titanium.UI.createTabGroup({
+	});
+         
 var tab1 = Titanium.UI.createTab({  
-    icon:'_PUShared/PUIcons/857-rocket-selected.png',
-    window:win1
+    icon:iconRocket,
+    window:winGame
 });
 
 var gameUrl;
@@ -35,13 +46,10 @@ var webView = Ti.UI.createWebView({
  });
     
 
-win1.add(webView);
+winGame.add(webView);
 
-//
-// create controls tab and root window
-//
-var win2 = Titanium.UI.createWindow({  
-       backgroundColor:'#1D3B4A',
+var winWeb = Titanium.UI.createWindow({  
+    backgroundColor:'#1D3B4A',
     color:'#fff',
     barColor: '#1D3B4A',
     titleControl: Ti.UI.createLabel({ 
@@ -51,22 +59,17 @@ var win2 = Titanium.UI.createWindow({
     		font:{fontSize:'18dp'},  
   		}) 
 });
+
 var tab2 = Titanium.UI.createTab({  
-    //icon:'KS_nav_ui.png',
-   // title:'Jobs',
-    color: 'white',
-    icon:'_PUShared/PUIcons/701-location-selected.png',
-    window:win2
+    icon:iconWeb,
+    window:winWeb
 });
 
 var webView2 = Ti.UI.createWebView({
-        //top:'-50dp',
-        //height:'94%',
         url:'http://pageuppeoplecareers.com/'
-    });
-    
+});    
 
-win2.add(webView2);
+winWeb.add(webView2);
 
 tabGroup.addTab(tab1);  
 tabGroup.addTab(tab2);  
