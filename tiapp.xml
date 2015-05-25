@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <icon>appicon.png</icon>
+    <icon>Icon.png</icon>
     <property name="acs-api-key-production" type="string">iblCTJdgLwXWlPgo11bHndBG6MBdPEKe</property>
     <property name="acs-api-key-development" type="string">6FYOyxB7qpDs4c4LpzcN5BLCNT7jtJpQ</property>
     <id>com.pageuppeople.values</id>
     <name>PageUp Values</name>
-    <version>1.0</version>
+    <version>1</version>
     <publisher>PageUp</publisher>
     <url>http://www.paguppeople.com</url>
     <description>Values game for recruitment</description>

@@ -7,12 +7,12 @@
 #define _QUOTEME(x) #x
 #define STRING(x) _QUOTEME(x)
 
-NSString * const TI_APPLICATION_DEPLOYTYPE = @"development";
+NSString * const TI_APPLICATION_DEPLOYTYPE = @"production";
 NSString * const TI_APPLICATION_ID = @"com.pageuppeople.values";
 NSString * const TI_APPLICATION_PUBLISHER = @"PageUp";
 NSString * const TI_APPLICATION_URL = @"http://www.paguppeople.com";
 NSString * const TI_APPLICATION_NAME = @"PageUp Values";
-NSString * const TI_APPLICATION_VERSION = @"1.0";
+NSString * const TI_APPLICATION_VERSION = @"1";
 NSString * const TI_APPLICATION_DESCRIPTION = @"Values game for recruitment";
 NSString * const TI_APPLICATION_COPYRIGHT = @"2015 by PageUp";
 NSString * const TI_APPLICATION_GUID = @"36c05d86-1def-4983-ab7b-c77417018ae9";

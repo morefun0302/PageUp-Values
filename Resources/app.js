@@ -1,6 +1,5 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
-//Titanium.UI.setBackgroundColor('#000');
-
+Titanium.include('/_PUShared/PUlib/icons.js');
+  
 var winGame = Titanium.UI.createWindow({  
     color:'#fff',
     backgroundColor: 'white',
@@ -14,6 +13,24 @@ var winGame = Titanium.UI.createWindow({
   		 navBarHidden: false,
 		navTintColor:'#fff',
 });
+
+
+	var density =  (Titanium.Platform.displayCaps.dpi <= 160) ? 'low' : (Titanium.Platform.displayCaps.dpi > 160 && Titanium.Platform.displayCaps.dpi < 250) ? 'medium' : 'high'; 
+	//var preamble = (Ti.Platform.osname === 'iphone' || (Ti.Platform.osname === 'ipad') )? 'images':'android/images/'+density + '/';
+	
+    var iSize;
+    
+ 
+    Ti.API.info('resolution=' + Titanium.Platform.displayCaps.dpi);
+    
+    if (density == 'low') {
+        iSize = (Ti.Platform.osname === 'android' ? 10 : 1);
+	}else if (density == 'medium') {
+	    iSize = (Ti.Platform.osname === 'android' ? 50 : 30);
+	}else {
+	    iSize = (Ti.Platform.osname === 'android' ? 80 : 40);	
+	}
+
 
 if(Ti.Platform.osname=="iphone"){
     	var iconRocket = '_PUShared/PUIcons/857-rocket-selected.png';
